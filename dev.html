@@ -1,0 +1,39 @@
+<html>
+<head>
+<title> NeurIPS 2020 Demo </title>
+</head>
+<style>
+#hr_top{
+    border-color:black;
+    border-width: 4px;
+    width: 50%;
+}
+
+#hr_bottom{
+    border-color:black;
+    border-width: 1px;
+    width: 50%;
+}
+</style>
+
+<body>
+<div>
+    <hr id="hr_top" style="width:55%;">
+    <h1 style="text-align: center;">Musical Speech</h1>
+    <h3 style="text-align: center;"> A Transformer-based Composition Tool</h3>
+    <hr id="hr_bottom" style="width:55%;">
+</div>
+
+<center>
+    <b> Summary</b>
+    <br>
+    <p style="width:55%;text-align: justify;">
+        Welcome! Our system generates a musical outline an input speech sound. 
+        You can either choose one of the sample tracks or record your own 10-second or shorter speech! 
+        The chosen speech sample is initially processed to extract formant frequencies and amplitudes, which are then used to construct piano notes from speech.
+        These set of notes are then trimmed to only include those notes corresponding to the peaks of the formant amplitude envelope. This sparsified note sequence is then used by the transformer to generate a music score of the speech.
+        You can listen to the audio samples at each stage of the conversion process and even visualize the spectrograms and the MIDI notes! You can also use the Mixing Controls to overlay the original speech sample and generated music clips.
+
+</center>
+</body>
+</html>
