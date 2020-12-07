@@ -38,7 +38,7 @@
   height: 60px;
 }
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: #B0C4DE;
 }
 
 .content {
@@ -157,7 +157,7 @@ of speech is an implicit source of inspiration. For example, <a href="https://ww
   <div class="divider">
   </div>
     
-      <button type="button" class="collapsible" style="width:55%;"><b>How were the samples created?</b></button>
+      <button type="button" class="collapsible" style="width:55%;  background-color:#DCDCDC; color: black"><b>How were the samples created?</b></button>
   <div class="content" style="width:75%; background-color: WhiteSmoke">
       <br>
  <p style="text-align: justify; font-size:1.75vmin;">
@@ -181,7 +181,7 @@ Dani Oore.
   <div class="divider">
   </div>
   
-  <button type="button" class="collapsible" style="width:55%; background-color:#DCDCDC; color: black"><b>What features are extracted from speech?</b></button>
+  <button type="button" class="collapsible" style="width:55%; background-color:#808080; color: white"><b>What features are extracted from speech?</b></button>
   <div class="content" style="width:75%; background-color: WhiteSmoke">
       <br>
       <p style="text-align: justify; font-size:1.75vmin;">
@@ -193,7 +193,7 @@ Dani Oore.
   <div class="divider">
   </div>
   
-    <button type="button" class="collapsible" style="width:55%;background-color:#808080; color: white"><b>What is meant by sparsification?</b></button>
+    <button type="button" class="collapsible" style="width:55%;background-color:#DCDCDC; color: black"><b>What is meant by sparsification?</b></button>
   <div class="content" style="width:75%; background-color: WhiteSmoke">
       <br>
       <p style="text-align: justify; font-size:1.75vmin;">
@@ -201,16 +201,38 @@ Dani Oore.
         The regions of interest are selected using two different approaches:
        </p>
        <ol style="text-align: justify; font-size:1.75vmin;">
-            <li>Approach 1 - Pre-defined threshold: In this approach, only frames with loudness value above a pre-defined threshold are retained.
+            <li>Approach 1 - Pre-defined threshold: In this approach, only frames with loudness value above a pre-defined threshold are potential regions for further processing.
               The pre-defined threshold is set based on empirical analysis.</li>
-            <li>Approach 2 - Peak picking: In this approach, 
+            <li>Approach 2 - Peak picking: In this approach, peaks in the loudness envelope are considered as the potential regions for further processing.
+                The peaks in the loudness envelope generally fall in the vicinity of syllable nuclei.
         </ol>
-        write about thresholding and syllable nuclei detection. Then mention that F0 values used for further pruning (selection) where F0 > 60
+        
       </p>
   </div>
 
   <div class="divider">
   </div>
+  
+    <button type="button" class="collapsible" style="width:55%;background-color:#808080; color: white"><b>What are the different levels in sparsification?</b></button>
+  <div class="content" style="width:75%; background-color: WhiteSmoke">
+      <br>
+      <p style="text-align: justify; font-size:1.75vmin;">
+        Loudness envelope extracted from the speech signal is processed to obtain regions of interest in speech.
+        The regions of interest are selected using two different approaches:
+       </p>
+       <ol style="text-align: justify; font-size:1.75vmin;">
+            <li>Approach 1 - Pre-defined threshold: In this approach, only frames with loudness value above a pre-defined threshold are potential regions for further processing.
+              The pre-defined threshold is set based on empirical analysis.</li>
+            <li>Approach 2 - Peak picking: In this approach, peaks in the loudness envelope are considered as the potential regions for further processing.
+                The peaks in the loudness envelope generally fall in the vicinity of syllable nuclei.
+        </ol>
+        
+      </p>
+  </div>
+
+  <div class="divider">
+  </div>
+                      
   
     <button type="button" class="collapsible" style="width:55%; background-color:#DCDCDC; color: black"><b>Can we try it for longer examples?</b></button>
   <div class="content" style="width:75%; background-color: WhiteSmoke">
