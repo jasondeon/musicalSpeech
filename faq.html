@@ -11,6 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.8.21/Tone.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/core.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
+
 <style>
 .collapsible {
   background-color: #777;
@@ -24,10 +25,30 @@
   font-size: 15px;
   height: 60px;
 }
+.simple_border {
+  background-color: #777;
+  color: white;
+/*   cursor: pointer; */
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  height: 60px;
+}
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
+}
+
+#span {
+  background-color: LightBlue;
 }
 
 #hr_top{
@@ -42,6 +63,7 @@
     width: 50%;
 }
 </style>
+
 
 <body>
 <div>
@@ -101,6 +123,24 @@
 
   
 </center>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
 
 </body>
 </html>
