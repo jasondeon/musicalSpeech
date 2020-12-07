@@ -80,6 +80,25 @@
     Your browser does not support the audio element.
     </audio><br></br>
   </div>
+
+  <button type="button" class="collapsible" style="width:75%;"><b>Features extracted from speech</b></button>
+  <div class="content" style="width:75%; background-color: WhiteSmoke">
+      <br>
+      <p style="text-align: justify; font-size:1.75vmin;">
+        Fundamental frequncy (F0) and loudness envelope of the speech signal are computed.
+        The features are extracted at frame-level using a frame size of 50 msec and frame shift of 20 msec.
+      </p>
+  </div>
+  
+    <button type="button" class="collapsible" style="width:75%;"><b>Sparsification of the features</b></button>
+  <div class="content" style="width:75%; background-color: WhiteSmoke">
+      <br>
+      <p style="text-align: justify; font-size:1.75vmin;">
+        Loudness envelope extracted from the speech signal is processed to obtain regions of interest in speech.
+        write about thresholding and syllable nuclei detection. Then mention that F0 values used for further pruning (selection) where F0 > 60
+      </p>
+  </div>
+
   
 </center>
 
