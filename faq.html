@@ -214,7 +214,13 @@ Dani Oore.
             <li>Approach 2 - Peak picking: In this approach, peaks in the loudness envelope are considered as the potential regions for further processing.
                 The peaks in the loudness envelope generally fall in the vicinity of syllable nuclei.
         </ol>
+        The selected regions are further refined by selecting only regions where F0 values are greater than 60 Hz. This step is performed to ensure that the regions of 
+        interest fall in the voiced regions where the F0 value estimation is more reliable.
+                                                           
+        In our <a href="https://panther.research.cs.dal.ca/demo">interactive demo</a>, in the sparsification type, v1 (v1:Low, v1:Medium and v1:High) follows 
+        Approach 1 and v2 (v2:Low, v2:Medium and v2:High) follows Approach 2, respectively, to obtain the sparsiified representation of the speech.
         
+
       </p>
   </div>
 
