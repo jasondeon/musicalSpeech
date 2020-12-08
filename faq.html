@@ -215,10 +215,10 @@ Dani Oore.
                 The peaks in the loudness envelope generally fall in the vicinity of syllable nuclei.
         </ol>
         The selected regions are further refined by selecting only regions where F0 values are greater than 60 Hz. This step is performed to ensure that the regions of 
-        interest fall in the voiced regions where the F0 value estimation is more reliable.
+        interest fall in the voiced regions where the F0 value estimation is more reliable. We will consider the F0 values obtained in the retained frames for further processing. 
         <b></b>                                                
         In our <a href="https://panther.research.cs.dal.ca/demo">interactive demo</a>, in the sparsification type, v1 (v1:Low, v1:Medium and v1:High) follows 
-        Approach 1 and v2 (v2:Low, v2:Medium and v2:High) follows Approach 2, respectively, to obtain the sparsiified representation of the speech.
+        Approach 1 and v2 (v2:Low, v2:Medium and v2:High) follows Approach 2, respectively, to obtain the sparsified representation of the speech.
         
 
       </p>
@@ -231,8 +231,14 @@ Dani Oore.
   <div class="content" style="width:75%; background-color: WhiteSmoke">
       <br>
       <p style="text-align: justify; font-size:1.75vmin;">
-        
-        
+        In our <a href="https://panther.research.cs.dal.ca/demo">interactive demo</a>, under sparsification type, you can see 6 options (v1:Low, v2:Low, v1:Medium, v2:Medium, v1:High and v2:High).
+        The different options with v1 (v1:Low, v1:Medium and v1:High) and v2 (v2:Low, v2:Medium and v2:High) refer to the different levels of sparsification 
+        obtained by using Approach 1 and Approach 2, respectively (explained in above question).
+        The options Low, Medium, High refers to the level of sparsification. Here "Low" refers to lower level of sparsification (most of the F0 values extracted from speech are retained) and "High"
+        refers to the higher level of sparsification (Very few of the F0 values extracted from speech are retained).
+        <br></br>
+        For Approach 1, the threshold is varied depending on the level of sparsification. For Approach 2, the context (number of frames selected) around each peak location are varied depending on the level of sparsification.
+        For instance in Approach 2, for the option v2:Low (lower level of sparsification), two frames on each side of the peak location (along with the peak location) are selected for further processing.
       </p>
   </div>
 
